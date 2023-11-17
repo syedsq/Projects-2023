@@ -1,0 +1,111 @@
+.navbar-brand {
+font-family: 'David Libre', serif;
+font-size: 2em;
+font-weight: bold;
+}
+
+.custom-nav .custom-nav-item a{
+  color: #304cb2 !important;
+}
+
+.custom-nav-item:hover {
+  background-color: #a4baf2;
+  border: solid #a4baf2 1px;
+  border-radius: 10px;
+}
+
+.remove-vid-marg{
+  margin: 0px;
+  padding: 0px;
+}
+.vid-parent {
+  position: relative;
+  /* Define size if needed, or make it responsive */
+}
+
+video {
+  width: 100%;  /* Make the video fill the container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  z-index: 0;   /* Ensures video stays behind the overlay */
+}
+
+.vid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;   /* Overlay is above the video */
+  opacity: 0.5;
+}
+
+.vid-content{
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 35%;
+  text-align: center;
+  color: #304cb2;
+
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  .my-content,
+  .txt-banner {
+    display: none;
+  }
+
+  .vid-content {
+    top: 12%;
+    left: 60%;
+  }
+
+  .custom-nav .custom-nav-item a {
+    padding: 10px 20px;
+    background-color: #225470;
+  }
+
+  .custom-nav .custom-nav-item a:active {
+    background-color: white !important; /* Override other styles */
+    color: #225470 !important;
+  }
+  .navbar-nav .nav-item .nav-link:active {
+    background-color: white; /* Background color for the active state */
+    color: #304cb2; /* Text color for the active state, assuming you want to keep it consistent with your theme */
+  }
+  /* Include this in your CSS file */
+  .card-img-top {
+    height: 200px; /* Fixed height for all images */
+    width: 100%; /* Responsive width */
+    object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+  }
+
+  .card {
+    overflow: hidden; /* Ensures nothing spills out of the card */
+  }
+
+  /* Additional styles for the cards to handle the fixed image size */
+  .card-body {
+    overflow: hidden; /* Adds scroll to the card body if content overflows */
+  }
+
+  .card-footer {
+    position: absolute; /* Positions the footer at the bottom of the card */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .card {
+    position: relative; /* Needed for absolute positioning of the footer */
+    height: 100%; /* Adjust if necessary */
+  }
+
+
+
+
+
+
+
+}
